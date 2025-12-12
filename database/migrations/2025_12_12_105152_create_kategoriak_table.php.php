@@ -10,7 +10,7 @@ return new class extends Migration
     {
         Schema::create('kategoriak', function (Blueprint $table) {
             $table->id();
-            $table->string('nev');
+            $table->string('kategoria_nev'); // seeder ezt használja
             $table->timestamps();
         });
     }

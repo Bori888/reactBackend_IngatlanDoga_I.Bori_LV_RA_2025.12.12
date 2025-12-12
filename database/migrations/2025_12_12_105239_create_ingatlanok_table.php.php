@@ -10,8 +10,11 @@ return new class extends Migration
     {
         Schema::create('ingatlanok', function (Blueprint $table) {
             $table->id();
-            $table->string('cim');
             $table->text('leiras')->nullable();
+            $table->date('datum')->nullable();
+            $table->boolean('tehermentes')->default(false);
+            $table->integer('ar')->nullable();
+            $table->string('kepUrl')->nullable();
             $table->foreignId('kategoria_id')->constrained('kategoriak')->cascadeOnDelete();
             $table->timestamps();
         });
